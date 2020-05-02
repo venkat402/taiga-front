@@ -2,6 +2,15 @@ tg-lightbox-close
 form
     h2.title(translate="LIGHTBOX.FEEDBACK.TITLE")
     fieldset
+                    input.e2e-create-epic-subject(
+                        type="text"
+                        ng-model="feedback.subject"
+                        tg-auto-select
+                        placeholder="{{'Subject'}}"
+                        data-required="true"
+                        data-maxlength="140"
+                    )
+    fieldset
         textarea(ng-model="feedback.comment", data-required="true",
                  ng-attr-placeholder="{{'LIGHTBOX.FEEDBACK.COMMENT' | translate}}")
     fieldset
