@@ -81,6 +81,18 @@ form(ng-if="lightboxOpen")
                         ng-attr-placeholder="{{ 'LIGHTBOX.CREATE_EDIT.' + translationID + '_PLACEHOLDER_DESCRIPTION' | translate }}"
                     )
                 fieldset
+                    input(
+                        type="text"
+                        name="team_members"
+                        ng-model-options="{ debounce: 200 }"
+                        ng-model="obj.team_members"
+                        tg-auto-select
+                        placeholder="Team members count"
+                        data-required="true"
+                        data-maxlength="500"
+                    )
+
+                fieldset
                     section
                     tg-attachments-simple(
                         attachments="attachments",
